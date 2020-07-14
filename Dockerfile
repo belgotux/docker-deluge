@@ -1,13 +1,11 @@
-# Deluge v1 version for windows client, based on S6 overlay script and lsiobase for deluge init script
-
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-LABEL build_version="Deluge v1 version for windows client version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="belgotux"
 ARG BUILD_VERSION
 FROM debian:${BUILD_VERSION}-slim
-
+# Deluge v1 version for windows client, based on S6 overlay script and lsiobase for deluge init script
+LABEL build_version="Deluge v1 version for windows client version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="belgotux"
 # environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
